@@ -1,6 +1,5 @@
 package com.nopaper.work.crack_detection;
 
-import org.bytedeco.opencv.global.opencv_core;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -14,13 +13,6 @@ public class CrackDetectionApplication {
 
 	public static void main(String[] args) {
         // Load OpenCV native library
-        try {
-            System.loadLibrary(opencv_core.OPENCV_CORE);
-            System.out.println("OpenCV loaded successfully!");
-        } catch (UnsatisfiedLinkError e) {
-            System.err.println("Failed to load OpenCV library: " + e.getMessage());
-        }
-        
         SpringApplication.run(CrackDetectionApplication.class, args);
     }
 
